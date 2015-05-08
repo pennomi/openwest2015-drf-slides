@@ -10,69 +10,92 @@
             <div class="slides">
                 <section>
                     <h2>Be a One-Dev Army with Django and Angular</h2>
-                    <h4>Part 1 of 3: Django</h4>
+                    <h4>Part 2 of 4: Django REST Framework</h4>
                 </section>
                 <section>
-                    <img src="http://static.tvtropes.org/pmwiki/pub/images/captainamerica29_330_8376.jpg"></img>
-                    <p>Think this guy, but as a web developer.</p>
+                    <h2>Web Sites vs Web Services</h2>
+                    <p>Web sites have <strong>pages</strong> and <strong>forms</strong></p>
+                    <p>Web services have APIs</p>
+                    <p class=fragment><small>(Application Programming Interface)</small></p>
                 </section>
                 <section>
-                    <h2>The Case for Django</h2>
+                    <h2>Why to use a Web Service</h2>
                     <ul>
-                        <li class="fragment">FAST development</li>
-                        <li class="fragment">Encourages clean design</li>
-                        <li class="fragment">Batteries included</li>
-                        <li class="fragment">Excellent security</li>
-                        <li class="fragment">Scalability</li>
+                        <li>Allows for multiple frontends.
+                            <ul>
+                                <li>JavaScript (AngularJS)</li>
+                                <li>Android</li>
+                                <li>iOS</li>
+                            </ul>
+                        </li>
+                        <li>Provide access to other developers (clients).</li>
+                        <li>Views only access data, not concerned with presentation.</li>
+                        <li>Greater separation of concerns.</li>
                     </ul>
                 </section>
                 <section>
-                    <h1>Django Concepts</h1>
+                    <h2>Intro to REST</h2>
+                    <img data-src="img/rest-area.jpg">
+                    <p>Representational State Transfer</p>
+                </section>
+                <section>
+                    <p>REST is a technique to guide the design of APIs one the web. REST has these basic principles:</p>
+                    <ul>
+                        <li>Client-Server Architecture</li>
+                        <li>Stateless</li>
+                        <li>Cacheable</li>
+                        <li>Layered (works with proxies)</li>
+                        <li>HATEOS <small class=fragment>Hypermedia As The Engine Of Application State</small></li>
+                    </ul>
                 </section>
                 <section>
                     <section>
-                        <h2>Models</h2>
+                        <h2>HTTP Verbs</h2>
+                        <p>REST uses a variety of HTTP verbs. Most web sites only use GET and POST, while services use many more.</p>
                         <ul>
-                            <li class="fragment">Metaclass MAGIC!</li>
-                            <li class="fragment">Multiple Database Backends</li>
-                            <li class="fragment"></li>
+                            <div class=fragment>
+                                <li>GET - <strong>safe</strong>ly read data without modifying</li>
+                                <li>HEAD - like GET, only read metadata</li>
+                                <li>OPTIONS - find out API information about the resource</li>
+                            </div>
+                            <div class=fragment>
+                                <li>PUT - Create or update a resource <strong>indempotently</strong></li>
+                                <li>PATCH - Partially update a resource.</li>
+                                <li>DELETE - Remove a resource.</li>
+                            </div>
+                            <li class=fragment>POST - Anything else (usually create something).</li>
                         </ul>
                     </section>
                     <section>
-                        <h2>The Django ORM</h2>
+                        <h2>Most Commonly Used</h2>
                         <ul>
-                            <li class="fragment">Translates code to SQL</li>
-                            <li class="fragment">Multiple Database Backends</li>
-                            <li class="fragment"></li>
-                        </ul>
-                    </section>
-                    <section>
-                        <h2>Migrations</h2>
-                        <ul>
-                            <li class="fragment">New in Django 1.7</li>
-                            <li class="fragment">Auto-detects model changes</li>
-                            <li class="fragment">Maintains full history</li>
+                            <li>Create: POST or PUT</li>
+                            <li>Read: GET</li>
+                            <li>Update: PUT or PATCH</li>
+                            <li>Delete: DELETE</li>
                         </ul>
                     </section>
                 </section>
                 <section>
-                    <section>
-                        <h2>Views</h2>
-                        <ul>
-                            <li class="fragment">Class-based goodness</li>
-                            <li class="fragment">Common generic views</li>
-                        </ul>
-                    </section>
+                    <h2>Enter Django REST Framework</h2>
+                    <p>Extensions to Django to make writing REST APIs in Django simple and effective.</p>
+                    <pre><code class=sh>pip install djangorestframework</code></pre>
                 </section>
                 <section>
-                    <section>
-                        <h2>Templates</h2>
-                        <ul>
-                            <li class="fragment">The visible part of your site</li>
-                            <li class="fragment">Django template language</li>
-                            <li class="fragment">New in Django 1.8: pluggable template engine</li>
-                        </ul>
-                    </section>
+                    <h2>Django REST Framework Essentials</h2>
+                    <h3>APIView</h3>
+                    <p>An extension of Django class-based views with REST-specific features.</p>
+                    <h3>ModelView</h3>
+                    <p>Generic class for an API tied to a model.</p>
+
+                    <h3>ViewSet</h3>
+                    <p>A collection of views, usually list and detail views together.</p>
+                </section>
+                <section>
+                    <h3>Serializers</h3>
+                    <p>Define how to convert Python data to an interchange format (like JSON or XML).</p>
+                    <h3>ModelSerializer</h3>
+                    <p>Metaclass magic to make a serializer from a model.</p>
                 </section>
             </div>
         </div>
