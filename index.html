@@ -10,7 +10,7 @@
             <div class="slides">
                 <section>
                     <h2>Be a One-Dev Army with Django and Angular</h2>
-                    <h4>Part 2 of 4: Django REST Framework</h4>
+                    <h4>Part 2 of 3: Django REST Framework</h4>
                 </section>
                 <section>
                     <h2>Web Sites vs Web Services</h2>
@@ -83,6 +83,12 @@
                 </section>
                 <section>
                     <h2>Django REST Framework Essentials</h2>
+                    <h3>Serializers</h3>
+                    <p>Define how to convert Python data to an interchange format (like JSON or XML).</p>
+                    <h3>ModelSerializer</h3>
+                    <p>Metaclass magic to make a serializer from a model.</p>
+                </section>
+                <section>
                     <h3>APIView</h3>
                     <p>An extension of Django class-based views with REST-specific features.</p>
                     <h3>ModelView</h3>
@@ -92,10 +98,25 @@
                     <p>A collection of views, usually list and detail views together.</p>
                 </section>
                 <section>
-                    <h3>Serializers</h3>
-                    <p>Define how to convert Python data to an interchange format (like JSON or XML).</p>
-                    <h3>ModelSerializer</h3>
-                    <p>Metaclass magic to make a serializer from a model.</p>
+                    <h3>Authenticaton and Permissions</h3>
+                    <p>Two different sets of classes you can associate with
+                    APIViews for security and user control.</p>
+                    <div class=fragment>
+                        <h4>Authentication</h4>
+                        <p>Adds the user to the request context. <small>Checks that the user is authentically who they say they are.</small></p>
+                    </div>
+                    <div class=fragment>
+                        <h4>Permissions</h4>
+                        <p>Controls access to resources after user is authenticated.</p>
+                    </div>
+                </section>
+                <section>
+                    <h3>Now you can make a RESTful API</h3>
+                    <img data-src="img/couch-potato.jpg">
+                </section>
+                <section>
+                    <h3>Stay awhile, and listen!</h3>
+                    <p>We've got oodles more going on for the rest of the conference!</p>
                 </section>
             </div>
         </div>
